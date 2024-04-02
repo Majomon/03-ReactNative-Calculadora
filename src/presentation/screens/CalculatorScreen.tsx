@@ -1,5 +1,6 @@
 import {Pressable, Text, View} from 'react-native';
-import {styles} from '../../config/app-theme';
+import {colors, styles} from '../../config/app-theme';
+import {CalculatorButton} from '../components/CalculatorButton';
 
 export const CalculatorScreen = () => {
   return (
@@ -9,18 +10,33 @@ export const CalculatorScreen = () => {
         <Text style={styles.subResult}>15</Text>
       </View>
       <View style={styles.row}>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>1</Text>
-        </Pressable>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>1</Text>
-        </Pressable>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>1</Text>
-        </Pressable>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>1</Text>
-        </Pressable>
+        <CalculatorButton label="C" color={colors.lightGray} blackText />
+        <CalculatorButton label="+/-" color={colors.lightGray} blackText />
+        <CalculatorButton label="del" color={colors.lightGray} blackText />
+        <CalculatorButton label="÷" color={colors.orange} />
+      </View>
+      <View style={styles.row}>
+        <CalculatorButton label="7" color={colors.darkGray} />
+        <CalculatorButton label="8" color={colors.darkGray} />
+        <CalculatorButton label="9" color={colors.darkGray} />
+        <CalculatorButton label="X" color={colors.orange} />
+      </View>
+      <View style={styles.row}>
+        <CalculatorButton label="4" color={colors.darkGray} />
+        <CalculatorButton label="5" color={colors.darkGray} />
+        <CalculatorButton label="6" color={colors.darkGray} />
+        <CalculatorButton label="-" color={colors.orange} />
+      </View>
+      <View style={styles.row}>
+        <CalculatorButton label="1" color={colors.darkGray} />
+        <CalculatorButton label="2" color={colors.darkGray} />
+        <CalculatorButton label="3" color={colors.darkGray} />
+        <CalculatorButton label="+" color={colors.orange} />
+      </View>
+      <View style={styles.row}>
+        <CalculatorButton label="0" color={colors.darkGray} doubleSize />
+        <CalculatorButton label="." color={colors.darkGray} />
+        <CalculatorButton label="=" color={colors.orange} />
       </View>
     </View>
   );
